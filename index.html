@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="subnet_app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="subnet_app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-logo-div">
+            <img src="./img/top_logo.png" alt="top logo" class="top-logo">
+        </div>
+        <div class="ip-address-div">
+            <h2 class="subnet-quiz-title">IPv4 Subnet Quiz!</h2>
+            <h1 id='ip-add-mask'>IP Address and Mask</h1>
+            <div class="ip-address__answers">
+                <form action="" autocomplete="off">
+                    <div class="ip-address__answers--input--div ip-address__answers--subnet-add">
+                        <input class="ip-address__answers--input" id="subnet-add-input" type="text" placeholder="Subnet Address" href="#subnet-add" autocomplete="off">
+                        <div class="display-answer correct-answer" id="subnet-add">Subnet Address</div>
+                    </div>
+
+                    <div class="ip-address__answers--input--div ip-address__answers--broadcast-add">
+                        <input class="ip-address__answers--input" id="broadcast-add-input" type="text" placeholder="Broadcast Address" href="#broadcast-add" autocomplete="off">
+                        <div class="display-answer correct-answer" id="broadcast-add">Broadcast Address</div>
+                    </div>
+
+                    <div class="ip-address__answers--input--div ip-address__answers--mask">
+                        <input class="ip-address__answers--input" id="subnet-mask-input" type="text" placeholder="Subnet Mask" href="#subnet-mask" autocomplete="off">
+                        <div class="display-answer correct-answer" id="subnet-mask">Subnet Mask</div>
+                    </div>
+
+                    <div class="ip-address__answers--input--div ip-address__answers--first-valid-add">
+                        <input class="ip-address__answers--input" id="first-valid-ip-input" type="text" placeholder="First Valid IP Address" href="#first-valid-ip" autocomplete="off">
+                        <div class="display-answer correct-answer" id="first-valid-ip">First Valid IP Address</div>
+                    </div>
+
+                    <div class="ip-address__answers--input--div ip-address__answers--last-valid-add">
+                        <input class="ip-address__answers--input" id="last-valid-ip-input" type="text" placeholder="Last Valid IP Address" href="#last-valid-ip" autocomplete="off">
+                        <div class="display-answer correct-answer" id="last-valid-ip">Last Valid IP Address</div>
+                    </div>
+                </form>
+
+                <div class="btn-div">
+                    <button class="btn btn-check" type="button">
+                        Check
+                    </button>
+                    <button class="btn btn-next" type="button">
+                        Next
+                    </button>
+                </div>
+            </div>
+            <footer class="footer">
+                <h5>TOP ECE REVIEW CENTER | IP Subnet Quiz Ver 0.1</h6>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
