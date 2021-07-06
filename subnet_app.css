@@ -110,6 +110,16 @@ h1 {
     margin-top: 2rem;
     display:flex;
     justify-content:flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timer {
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight:bold;
+    color:red;
 }
 
 .btn {
@@ -196,4 +206,36 @@ h1 {
     .footer {
         text-align: center;
     }
+}
+
+@media screen and (max-width:300px) {
+    .container {
+        width:85%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+    .ip-address__answers--input {
+        font-size: 1.2rem;
+    }
+    .ip-address-div {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .display-answer {
+        font-size: 1.2rem;
+    }
+    .btn-div {
+        justify-content:center;
+        flex-direction: column;
+    }
+    .btn-check, .btn-next {
+        margin-left:0;
+        margin-top: 1rem;
+    }
+    
 }

@@ -163,6 +163,26 @@ if (subnetMaskSlash === 8) {
 const btnCheck = document.querySelector('.btn-check');
 const answersShow = document.querySelectorAll('.ip-address__answers--input')
 const btnNext = document.querySelector('.btn-next');
+const timerDisplay = document.querySelector('.timer');
+
+let halt = false
+const elapsedTime = function(){
+    let time = 0;
+    const timer = setInterval(() => {
+        // Increment the time every 1 sec
+        time++
+        if(halt || time === 300){
+            const min = String(Math.trunc(time / 60)).padStart(2, '0');
+            const sec = String(time % 60).padStart(2, '0');
+            timerDisplay.textContent = `${min}:${sec}`;
+            revealAnswer();
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
+elapsedTime()
+
 
 const revealAnswer = () => {
     for(let input of answersShow) { 
@@ -182,10 +202,11 @@ const revealAnswer = () => {
         if (studentAnswerArr[i].value !== correctArr[i]) {
             studentAnswerArr[i].style.backgroundColor = '#FF616D';
             studentAnswerArr[i].style.color = 'white';
+            studentAnswerArr[i].disabled = true;
         } else {
             studentAnswerArr[i].style.backgroundColor = '#66DE93';
         }
-    }
+    } halt = true
     
 }
 btnCheck.addEventListener('click', revealAnswer);
